@@ -1,7 +1,7 @@
 int a;
 a = 12;
 if (a > 3) {
-    System.out.println("i hate niggers")
+    System.out.println("ahoj")
 }
 
 
