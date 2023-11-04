@@ -12,19 +12,32 @@ public class Main {
         int cisloDni; //Výsledek metody, která převede měsíce na dny a součet se dnem uloží do proměnné
         int zaDni; //Za jak dlouho budou další narozeniny
         int dnesniDatum; //Dnešní datum
-        int jeTiLet; //Kolik je danému člověku LET
+        int zaKolikLet; //Kolik je danému člověku LET
+        
+        //promenné ze scanneru
+        int rok;
+        int mesic;
+        int den;
+
+
+
+        System.out.println("Prosím, vložte svůj rok narození");
+        Scanner rok = new scanner(System.in);
+        System.out.println("Prosím, vložte svůj měsíc narození");
+        Scanner mesic = new scanner(System.in);
+        System.out.println("Prosím, vložte svůj den narození");
+        Scanner den = new scanner(System.in);
+
+
+        if[ ]{
+
+        }
 
 
         
+        zaKolikLet = rokNarozeni - cilovyVek;
 
-
-
-        
-        jeTiLet = rokNarozeni - cilovyVek;
-
-
-
-        System.out.println("Je ti" + (dnesniDatum - datumNarozeni) );
+        System.out.println("Je ti " + (dnesniDatum - rokNarozeni) + " | Další narozeniny budeš mít za " + zaDni + " dní | A jak jsi po mě chtěl, " + cilovyVek + " ti bude za " + zaKolikLet);
 
 
     }
