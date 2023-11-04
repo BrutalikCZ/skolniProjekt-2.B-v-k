@@ -15,29 +15,30 @@ public class Main {
         int zaKolikLet; //Kolik je danému člověku LET
         
         //promenné ze scanneru
-        int rok;
-        int mesic;
-        int den;
+        
 
-
+      
+        
 
         System.out.println("Prosím, vložte svůj rok narození");
-        Scanner rok = new scanner(System.in);
+        Scanner rk = new Scanner(System.in);
+        int rok = rk.nextInt();
         System.out.println("Prosím, vložte svůj měsíc narození");
-        Scanner mesic = new scanner(System.in);
+        Scanner mc = new Scanner(System.in);
+        int mesic = mc.nextInt();
         System.out.println("Prosím, vložte svůj den narození");
-        Scanner den = new scanner(System.in);
+        Scanner dn = new Scanner(System.in);
+        int den = dn.nextInt();
+
+        //if[ ]{}
 
 
-        if[ ]{
-
-        }
-
+        System.out.println(rok + "" + mesic + "" + den);
 
         
-        zaKolikLet = rokNarozeni - cilovyVek;
+        //zaKolikLet = rokNarozeni - cilovyVek;
 
-        System.out.println("Je ti " + (dnesniDatum - rokNarozeni) + " | Další narozeniny budeš mít za " + zaDni + " dní | A jak jsi po mě chtěl, " + cilovyVek + " ti bude za " + zaKolikLet);
+        //System.out.println("Je ti " + (dnesniDatum - rokNarozeni) + " | Další narozeniny budeš mít za " + zaDni + " dní | A jak jsi po mě chtěl, " + cilovyVek + " ti bude za " + zaKolikLet);
 
 
     }
