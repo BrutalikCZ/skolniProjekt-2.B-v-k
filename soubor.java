@@ -1,38 +1,41 @@
-import java.util.InputMismatchException;
-import java.util.Scanner;
 import java.text.SimpleDateFormat;
-import java.text.ParseException;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.text.ParseException;
 
-public class Main {
-    public static void main(String[] args) {
-        Map<String, Integer> mesiceNaDny = new HashMap<>();
-        mesiceNaDny.put("leden", 31);
-        mesiceNaDny.put("unor", 28); 
-        mesiceNaDny.put("brezen", 31);
-        mesiceNaDny.put("duben", 30);
-        mesiceNaDny.put("kveten", 31);
-        mesiceNaDny.put("cerven", 30);
-        mesiceNaDny.put("cervenec", 31);
-        mesiceNaDny.put("srpen", 31);
-        mesiceNaDny.put("zari", 30);
-        mesiceNaDny.put("rijen", 31);
-        mesiceNaDny.put("listopad", 30);
-        mesiceNaDny.put("prosinec", 31);
 
-        
-        String nazevMesice = "leden";
+public class VypocetCislaDni
+{
 
-        
-        int pocetDni = mesiceNaDny.get(nazevMesice);
+    private SimpleDateFormat sdf = new SimpleDateFormat("d.M.yyyy");
+    private int result = 0;
 
-       
-        System.out.println("Měsíc " + nazevMesice + " má " + pocetDni + " dní.");
+    public VypocetCislaDni(String date1, String date2)
+    {
+        Date firstDate = getDate(date1);
+        Date secondDate = getDate(date2);
+        calculateDifference(firstDate, secondDate);
+    }
+
+    private void calculateDifference(Date dateNextBirthday, Date todaysDate) {
+        this.result = (int) ((dateNextBirthday.getTime() - todaysDate.getTime()) / (24 * 60 * 60 * 1000)) ;
+    }
+
+    private Date getDate(String dateString)
+    {
+        Date todaysDate = new Date();
+        if (dateString.equals("today")) {
+                return todaysDate;
+        }
+        try {
+            todaysDate = this.sdf.parse(dateString);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return todaysDate;
+    }
+
+    public int get()
+    {
+        return this.result;
     }
 }
-l");
- 
-
-
